@@ -1,0 +1,304 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Litten || Feature Request | Bug Report</title>
+
+    <style>
+
+        html, body {
+
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+            cursor: default;
+            -webkit-font-smoothing: antialiased;
+            text-transform: capitalize;
+            background-image: url("assets/bugReportBackground.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+
+        }
+
+        .mail .container {
+
+            display: inline-block;
+            text-align: center;
+
+        }
+
+        .mail .container .titleLayout, .bodyLayout, button {
+
+            height: 80px;
+            width: 500px;
+            background: #fff;
+            transform: translateY(50px);
+            box-shadow: 0px 3px 13px 3px rgba(0, 0, 0, .2);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 2px solid #fff;
+
+        }
+
+        .mail .container .titleLayout input {
+
+            height: 100%;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0);
+            font-size: 40px;
+            color: #fff;
+            font-family: 'Raleway';
+            text-decoration: none;
+            padding-left: 10px;
+            display: block;
+
+        }
+
+        .mail .container .titleLayout input:focus, .bodyLayout:focus {
+
+            outline: none;
+
+        }
+
+        .mail .container .titleLayout input::placeholder {
+
+            color: #fff;
+            opacity: .5;
+            font-family: 'Raleway';
+
+        }
+
+        .mail .container .bodyLayout::placeholder {
+
+            font-size: 28px;
+            color: #fff;
+            opacity: .5;
+            font-family: 'Raleway';
+
+        }
+
+        .mail .container .bodyLayout {
+
+            height: 500px;
+            width: 500px;
+            font-size: 28px;
+            color: #fff;
+            opacity: 1;
+            font-family: 'Raleway';
+            resize: none;
+
+        }
+
+        .mail .container button {
+
+            display: block;
+            margin-top: 30px;
+            font-size: 34px;
+            color: #fff;
+            font-family: 'Raleway';
+
+        }
+
+        .mail .container button:hover {
+
+            cursor: pointer;
+
+        }
+        /* too lazy to make my own hover effect, https://codepen.io/fishtoyo/pen/VYQVQx */
+        .mail .container button:after {
+
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: rgba(255,255,255,0.4);
+            -webkit-transition: none;
+            -moz-transition: none;
+            transition: none;
+            
+        }
+
+        .mail .container button:hover:after {
+
+            width: 120%;
+            background-color: rgba(255,255,255,0);
+  
+	        -webkit-transition: all 0.4s ease-in-out;
+	        -moz-transition: all 0.4s ease-in-out;
+	        transition: all 0.4s ease-in-out;
+
+        }
+
+        @font-face {
+            font-family: 'Raleway';
+            src: url("assets/Raleway-Regular.ttf");
+        }
+
+        @media only screen and (max-width: 1024px) {
+
+            .mail .container .bodyLayout {
+
+                height: 450px;
+                width: 500px;
+                font-size: 24px;
+
+            }
+
+        }
+
+        @media only screen and (max-width: 800px) {
+
+            .mail .container .bodyLayout {
+
+                height: 300px;
+                width: 500px;
+                font-size: 28px;
+
+            }
+
+        }
+
+        @media only screen and (max-width: 414px) {
+
+            .mail .container .titleLayout, .bodyLayout, button {
+
+                height: 80px;
+                width: 350px;
+
+            }
+
+            .mail .container .titleLayout input {
+
+                font-size: 32px;
+
+            }
+
+            .mail .container .titleLayout input::placeholder {
+
+                font-size: 32px;
+
+            }
+
+            .mail .container .bodyLayout {
+
+                height: 300px;
+                width: 350px;
+                font-size: 28px;
+
+            }
+
+            .mail .container .bodyLayout::placeholder {
+
+                font-size: 24px;
+
+            }
+
+        }
+
+        @media only screen and (max-width: 375px) {
+
+            .mail .container .titleLayout, .bodyLayout, button {
+
+                transform: translateY(20px);
+
+            }
+            
+        }
+
+        @media only screen and (max-width: 320px) {
+
+            .mail .container .titleLayout, .bodyLayout, button {
+
+                height: 60px;
+                width: 300px;
+
+            }
+
+            .mail .container .titleLayout input {
+
+                font-size: 28px;
+
+            }
+
+            .mail .container .titleLayout input::placeholder {
+
+                font-size: 28px;
+
+            }
+
+            .mail .container .bodyLayout {
+
+                height: 250px;
+                width: 300px;
+                font-size: 24px;
+
+            }
+
+            .mail .container .bodyLayout::placeholder {
+
+                font-size: 22px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="mail">
+        <div class="container">
+
+
+            <form class="titleLayout" spellcheck="false">
+
+                <input id="subject" type="text" placeholder="Request Or Bug Title">
+
+            </form>
+
+
+            <textarea id="content" class="bodyLayout" placeholder="Please Include: - An Explanation Of Your Request Or Bug; - A Way For Me To Reproduce The Issue If It's A Bug Report; - A Crash Report If It Crashed A Process (Attach To The Mail After This Step)" spellcheck="false"></textarea>
+
+            <button onclick="composeMail()">Compose Mail</button>
+
+        </div>
+    </div>
+    
+    <script>
+
+        function composeMail() {
+
+            var link = "mailto:hiya@litten.love?" + "&subject=" + document.getElementById('subject').value + "&body=" + document.getElementById('content').value;
+
+            window.location.href = link;
+
+        }
+
+    </script>
+
+    <script>
+
+        $(document).keypress(
+
+        function(event){
+
+            if (event.which == '13') {
+                event.preventDefault();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
