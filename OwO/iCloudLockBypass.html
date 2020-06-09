@@ -1,0 +1,160 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ShyMemoriees | iCloud Lock Bypass</title>
+
+    <style>
+
+        body, html {
+
+            margin: 0;
+            padding: 0;
+
+        }
+    
+        .home {
+
+            background-color: #000000;
+            height: 400px;
+            width: 100%;
+
+        }
+
+        .home .container #header {
+
+            color: #ffffff;
+            font-size: 64px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+            margin-left: 70px;
+            transform: translateY(100px);
+            text-align: left;
+
+        }
+
+        .home .container #header2 {
+
+            color: #ffffff;
+            font-size: 32px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+            margin-left: 70px;
+            transform: translateY(70px);
+            text-align: left;
+            
+
+        }
+
+        .content .container {
+
+            text-align: center;
+            color: #000000;
+            font-weight: normal;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 25px;
+            transform: translateY(100px);
+            margin: 0px 25px 0px 25px;
+
+        }
+
+        .content .container p {
+
+            margin: 100px 0px 0px 0px;
+
+        }
+
+        .content .container span {
+
+            font-size: 40px;
+
+        }
+
+        .content .container .commands {
+
+            color: purple;
+            font-size: 25px;
+
+        }
+
+        .content .container img {
+
+            width: 800px;
+            height: 480px;
+            margin: 50px 0px 0px 0px;
+
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            body {
+
+                background-color: #000000;
+
+            }
+
+            #header3 {
+
+                color: red;
+                font-size: 30px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: bold;
+                transform: translateY(50px);
+                margin: 0px 10px 0px 10px;
+
+            }
+
+            .content {
+
+                display: none;
+
+            }
+
+        }
+    
+    </style>
+
+</head>
+<body>
+
+    <div class="home">
+        <div class="container">
+
+            <h1 id="header">How To Bypass iCloud Lock</h1>
+            <p id="header2">For checkra1n Devices</p>
+            <p id="header3">Please visit this page on your Mac or PC.</p>
+            
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+
+            <p>Keep in mind that iCloud and Cellular may be broken after proceeding (a restore fixes it, but you'll be locked out again)<br>But it's still useful for tweak development/testing or such</p>
+
+            <p><span>Step 1:</span><br>Connect your device to your Mac and jailbreak with checkra1n and leave it connected.</p>
+
+            <p><span>Step 2:</span><br>Open a Terminal window and install homebrew by typing<br><span class="commands">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span></p>
+
+            <p><span>Step 3:</span><br>install libimobiledevice with homebrew by typing <br><span class="commands">brew install libimobiledevice</span></p>
+            
+            <p><span>Step 4:</span><br>Open a second terminal window (command + n) and type <span class="commands">iproxy 2022 44</span> in the first one.<br>Type this in the second window <span class="commands">ssh root@localhost -p 2022</span> and just enter your device's ssh password (default: alpine)</p>
+
+            <p><span>Step 5:</span><br>When connected with SSH in the second terminal window type <span class="commands">mount -o rw,union,update /</span> to mount your device.</p>
+
+            <p><span>Step 6:</span><br>Type this again in your second window (like all next steps) <span class="commands">echo "" >> /.mount_rw</span></p>
+
+            <p><span>Step 7:</span><br>Now we'll delete the setup.app to bypass everything, type this<br><span class="commands">rm -rf /Applications/Setup.app</span></p>
+
+            <p><span>Step 8:</span><br>For the final touches we'll reload the icon cache and respring so type<br><span class="commands">uicache --all</span> and give it a moment.</p>
+
+            <p><span>Step 9:</span><br>For the last step we'll just respring<br><span class="commands">killall backboardd</span></p>
+
+            <p>I Hope This Worked For You 🌸</p>
+
+        </div>
+    </div>
+    
+</body>
+</html>

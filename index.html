@@ -44,17 +44,16 @@
 
         .home .container .personal #DisplayName {
 
-            color: #fff;
+            color: #F7D5E7;
             font-size: 64px;
             opacity: .8;
-
         }
 
         .home .container .personal #UserName a {
 
-            color: #fff;
+            color: #DFBBE6;
             font-size: 32px;
-            opacity: .8;
+            opacity: .6;
             text-decoration: none;
             transform: translateY(-100px);
 
@@ -123,7 +122,7 @@
         .home .container #AboutMe {
 
             font-size: 2.7vw;
-            color: #fff;
+            color: #121217;
             margin-right: 100px;
             transform: translateY(80px);
             opacity: 0;
@@ -273,8 +272,8 @@
         .moreWindow .container .window {
 
             position: relative;
-            height: 570px;
-            width: 400;
+            height: 470px;
+            width: 350;
             background: #F4F1F2;
             box-shadow: 0px 3px 13px 3px rgba(0, 0, 0, .2);
             border-radius: 10px;
@@ -286,7 +285,7 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            height: 35px;
+            height: 30px;
             width: auto;
 
         }
@@ -298,7 +297,7 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            font-size: 28px;
+            font-size: 26px;
 
         }
 
@@ -355,7 +354,7 @@
 
         }
 
-        .moreWindow .container .window .links #featureRequest {
+        .moreWindow .container .window .links #repository {
 
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
@@ -373,6 +372,20 @@
                 transform: translateY(200px);
                 margin-left: 0px;
                 text-align: center;
+
+            }
+
+            .home .container .personal #DisplayName {
+
+                color: #F7D5E7;
+                opacity: 1;
+
+            }
+
+            .home .container .personal #UserName a {
+
+                color: #DFBBE6;
+                opacity: .8;
 
             }
 
@@ -459,7 +472,6 @@
 
             .moreWindow .container .window {
 
-                height: 550px;
                 width: 340px;
 
             }
@@ -482,7 +494,6 @@
 
             .moreWindow .container .window {
 
-                height: 550px;
                 width: 320px;
 
             }
@@ -619,9 +630,85 @@
         
         /* dark mode detection */
 
-        /* @media (prefers-color-scheme: light)
+        @media (prefers-color-scheme: light) {
 
-        @media (prefers-color-scheme: dark) */
+            html, body {
+
+                background-color: #fff;
+
+            }
+
+            .header {
+
+                color: #000;
+
+            }
+
+            .moreWindow .container .window #contactHeader {
+
+                color: #000;
+
+            }
+
+            .moreWindow .container .window {
+
+                background: #F4F1F2;
+
+            }
+
+            .moreWindow .container .window .links li {
+
+                background-color: #fff;
+
+            }
+
+            .moreWindow .container .window .links li a {
+
+                color: #000;
+
+            }
+
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            html, body {
+
+                background-color: #121217;
+
+            }
+
+            .projects .container .header {
+
+                color: #fff;
+
+            }
+
+            .moreWindow .container .window #contactHeader {
+
+                color: #fff;
+
+            }
+
+            .moreWindow .container .window {
+
+                background: rgb(31, 31, 31);
+
+            }
+
+            .moreWindow .container .window .links li {
+
+                background-color: rgb(49, 49, 49);
+
+            }
+
+            .moreWindow .container .window .links li a {
+
+                color: #fff;
+
+            }
+
+        }
 
     </style>
 
@@ -643,13 +730,13 @@
 
                 </ul>
 
-                <p id="AboutMe">hiya, here you'll find all my projects and some other things, like my guides. i also don't reveal much about myself online so nothing to find here either. well, i like to make iOS tweaks and web design hehe. i'm grateful you're taking a lookat my site and work, also thanks to everyone who's super friendly to me, i appreciate it.</p>
+                <p id="AboutMe">hiya, here you'll find all my projects and some other things, like my guides. i also don't reveal much about myself online so nothing to find here either. well, i like to make iOS tweaks and web design hehe. i'm grateful you're taking a look at my site and work, also thanks to everyone who's super friendly to me, i appreciate it.</p>
 
             </div>
 
             <div class="avatarContainer">
 
-                <img id="avatar" src="assets/avatar.jpg" draggable="false">
+                <img id="avatar" src="assets/avatar.png" draggable="false">
                 <img id="lock" src="assets/lock.png" draggable="false">
 
             </div>
@@ -676,6 +763,7 @@
 
             <ul class="projectsList">
 
+                <li><div class="ProjectItem"><a href="https://repo.litten.love/depictions/drs/" target="_blank"><img src="assets/Dress.png" draggable="false"><h1>Dress<br><span>up your lockscreen with one tweak instead of needing multiple</span></h1></a></div></li>
                 <li><div class="ProjectItem"><a href="https://repo.litten.love/depictions/rse/" target="_blank"><img src="assets/Rose.png" draggable="false"><h1>Rose<br><span>was my first tweak i really worked hard on to make it the most advanced haptic feedback tweak ever, people say i achieved my goal, which i am happy about</span></h1></a></div></li>
                 <li><div class="ProjectItem"><a href="https://repo.litten.love/depictions/lne/" target="_blank"><img src="assets/Lune.png" draggable="false"><h1>Lune<br><span>was made as an alternative for the tweak LeaveMeAlone as it's broken on iOS 13, the little moon on the lockscreen has something special</span></h1></a></div></li>
                 <li><div class="ProjectItem"><a href="https://repo.litten.love/depictions/bty/" target="_blank"><img src="assets/Butterfly.png" draggable="false"><h1>Butterfly<br><span>'s colors for the typing indicator/Caret are really pretty to look at, it makes your typing experience a lot better</span></h1></a></div></li>
@@ -693,7 +781,8 @@
 
                 <li><div class="ProjectItem"><a href="https://litten.love/OwO/tweakDevelopmentForBeginners.pdf" target="_blank"><img src="assets/tweakDevelopment.png" draggable="false"><h1>Tweak Development Guide<br><span>i wrote this guide to help out newcomers of the jailbreaking development community, you'll learn how tweaks are made by creating three tweaks</span></h1></a></div></li>
                 <li><div class="ProjectItem"><a href="https://litten.love/OwO/iOS-Jailbreaking.pdf" target="_blank"><img src="assets/jailbreakSlides.png" draggable="false"><h1>Jailbreak Slides<br><span>when we needed to talk about something in school i chose jailbreaking, i decided to upload it so everyone can use it</span></h1></a></div></li>
-                <li><div class="ProjectItem"><a href="https://litten.love/help/OwO/iCloudLockBypass.html" target="_blank"><img src="assets/iCloudLockBypass.png" draggable="false"><h1>iCloud Lock Bypass<br><span>this method only works up to iOS 13.3 i think, calls won't work as it just explains how to remove the setup.app</span></h1></a></div></li>
+                <li><div class="ProjectItem"><a href="https://litten.love/OwO/iCloudLockBypass.html" target="_blank"><img src="assets/iCloudLockBypass.png" draggable="false"><h1>iCloud Lock Bypass<br><span>this method only works up to iOS 13.3 i think, calls won't work as it just explains how to remove the setup.app</span></h1></a></div></li>
+                <li><div class="ProjectItem"><a href="https://litten.love/OwO/bootlogos" target="_blank"><img src="assets/bootlogos.png" draggable="false"><h1>Bootlogos<br><span>a small but fancy addition to make your boot stand out</span></h1></a></div></li>
                 
             </ul>
             
@@ -716,9 +805,7 @@
                         <li><a href="https://github.com/Litteeen" target="_blank"><span>GitHub</span><i class="fab fa-github"></i></a></li>
                         <li><a href="https://discordapp.com/invite/mbh6QAa" target="_blank"><span>Discord</span><i class="fab fa-discord"></i></a></li>
                         <li><a href="mailto:hiya@litten.love" target="_blank"><span>Email</span><i class="fas fa-envelope"></i></a></li>
-                        <li><a href="https://repo.litten.love" target="_blank"><span>Repository</span><i class="fas fa-box-open"></i></a></li>
-                        <li><a href="https://litten.love/report.html" target="_blank"><span>Bug Report</span><i class="far fa-eye-slash"></i></a></li>
-                        <li id="featureRequest"><a href="https://litten.love/report.html" target="_blank"><span>Feature Request</span><i class="fas fa-eye"></i></a></li>
+                        <li id="repository"><a href="https://repo.litten.love" target="_blank"><span>Repository</span><i class="fas fa-box-open"></i></a></li>
             
                     </ul>
 
@@ -736,7 +823,7 @@
 
             if (!isExpanded) {
                 document.getElementById('HomeView').style.height = "800px";
-                document.getElementById('AboutMe').style.opacity = "1";
+                document.getElementById('AboutMe').style.opacity = ".4";
                 document.getElementById('AboutMe').style.display = "block";
                 isExpanded = true;
 
